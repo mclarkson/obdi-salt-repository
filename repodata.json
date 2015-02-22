@@ -4,11 +4,10 @@
     "Description":"Base Salt Tools plugin. Required by all Salt plugins.",
     "Url":"https://github.com/mclarkson/obdi-salt.git",
     "Depends":{},
-    "Provides":"salt",
     "Versions":[
       {
         "Version":"0.1.3",
-        "CommitSHA":"",
+        "CommitSHA":"192c59bb4559beb0cd292122ec8d2b94ed3bedfb",
         "CodeName":"china",
         "Type":"alpha",
         "ObdiCompatibility":{"Version":"0.1.3","VersionMatchType":"AtLeast"}
@@ -24,11 +23,86 @@
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
     },
-    "Provides":"saltconfigserver",
     "Versions":[
       {
         "Version":"0.1.3",
-        "CommitSHA":"",
+        "CommitSHA":"e8254cc5a080be677d380018563a3f92635faca4",
+        "CodeName":"china",
+        "Type":"alpha",
+        "ObdiCompatibility":{"version":"0.1.3","Type":"AtLeast"}
+      }
+    ]
+  },
+  {
+    "Name":"saltjobviewer",
+    "Description":"Plugin to allow Salt jobs to be viewed.",
+    "Url":"https://github.com/mclarkson/obdi-saltjobviewer.git",
+    "Depends":{
+      "Name":"salt",
+      "Version":"0.1.3",
+      "VersionMatchType":"AtLeast"
+    },
+    "Versions":[
+      {
+        "Version":"0.1.3",
+        "CommitSHA":"a75323a458efbd3cb807b2e60e851d904a47222c",
+        "CodeName":"china",
+        "Type":"alpha",
+        "ObdiCompatibility":{"version":"0.1.3","Type":"AtLeast"}
+      }
+    ]
+  },
+  {
+    "Name":"saltkeymanager",
+    "Description":"Plugin to allow management of Salt keys.",
+    "Url":"https://github.com/mclarkson/obdi-saltkeymanager.git",
+    "Depends":{
+      "Name":"salt",
+      "Version":"0.1.3",
+      "VersionMatchType":"AtLeast"
+    },
+    "Versions":[
+      {
+        "Version":"0.1.3",
+        "CommitSHA":"077a34fe840ba21be1b34892fb82bfe7dcefc450",
+        "CodeName":"china",
+        "Type":"alpha",
+        "ObdiCompatibility":{"version":"0.1.3","Type":"AtLeast"}
+      }
+    ]
+  },
+  {
+    "Name":"saltregexmanager",
+    "Description":"Plugin to allow Salt state files to be assigned to hosts using regular expressions.",
+    "Url":"https://github.com/mclarkson/obdi-saltregexmanager.git",
+    "Depends":{
+      "Name":"salt",
+      "Version":"0.1.3",
+      "VersionMatchType":"AtLeast"
+    },
+    "Versions":[
+      {
+        "Version":"0.1.3",
+        "CommitSHA":"5ae1e2c7496669ca63391d87f04c426f2e7dd6ce",
+        "CodeName":"china",
+        "Type":"alpha",
+        "ObdiCompatibility":{"version":"0.1.3","Type":"AtLeast"}
+      }
+    ]
+  },
+  {
+    "Name":"saltupdategit",
+    "Description":"Plugin to update a local git repository from a remote git repository and version it.",
+    "Url":"https://github.com/mclarkson/obdi-saltupdategit.git",
+    "Depends":{
+      "Name":"salt",
+      "Version":"0.1.3",
+      "VersionMatchType":"AtLeast"
+    },
+    "Versions":[
+      {
+        "Version":"0.1.3",
+        "CommitSHA":"c00bbdaadbbaeb74e6ef7b2d7915897f66607e52",
         "CodeName":"china",
         "Type":"alpha",
         "ObdiCompatibility":{"version":"0.1.3","Type":"AtLeast"}
