@@ -3,7 +3,7 @@
     "Name":"salt",
     "Description":"Base Salt Tools plugin. Required by all Salt plugins.",
     "Url":"https://github.com/mclarkson/obdi-salt.git",
-    "Depends":{},
+    "Depends":[{}],
     "Versions":[
       {
         "Version":"0.1.3",
@@ -18,11 +18,11 @@
     "Name":"saltconfigserver",
     "Description":"Plugin to allow configuration of servers.",
     "Url":"https://github.com/mclarkson/obdi-saltconfigserver.git",
-    "Depends":{
+    "Depends":[{
       "Name":"salt",
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
-    },
+    }],
     "Versions":[
       {
         "Version":"0.1.3",
@@ -37,11 +37,11 @@
     "Name":"saltjobviewer",
     "Description":"Plugin to allow Salt jobs to be viewed.",
     "Url":"https://github.com/mclarkson/obdi-saltjobviewer.git",
-    "Depends":{
+    "Depends":[{
       "Name":"salt",
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
-    },
+    }],
     "Versions":[
       {
         "Version":"0.1.3",
@@ -56,11 +56,11 @@
     "Name":"saltkeymanager",
     "Description":"Plugin to allow management of Salt keys.",
     "Url":"https://github.com/mclarkson/obdi-saltkeymanager.git",
-    "Depends":{
+    "Depends":[{
       "Name":"salt",
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
-    },
+    }],
     "Versions":[
       {
         "Version":"0.1.3",
@@ -75,11 +75,11 @@
     "Name":"saltregexmanager",
     "Description":"Plugin to allow Salt state files to be assigned to hosts using regular expressions.",
     "Url":"https://github.com/mclarkson/obdi-saltregexmanager.git",
-    "Depends":{
+    "Depends":[{
       "Name":"salt",
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
-    },
+    }],
     "Versions":[
       {
         "Version":"0.1.3",
@@ -94,11 +94,11 @@
     "Name":"saltupdategit",
     "Description":"Plugin to update a local git repository from a remote git repository and version it.",
     "Url":"https://github.com/mclarkson/obdi-saltupdategit.git",
-    "Depends":{
+    "Depends":[{
       "Name":"salt",
       "Version":"0.1.3",
       "VersionMatchType":"AtLeast"
-    },
+    }],
     "Versions":[
       {
         "Version":"0.1.3",
