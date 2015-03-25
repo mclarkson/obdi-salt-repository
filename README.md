@@ -1,6 +1,10 @@
 # obdi-salt-repository
 Repository metadata store for Salt Stack plugins
 
+Add `https://github.com/mclarkson/obdi-salt-repository.git` to Repository URLs in the Obdi Admin interface.
+
+Further documentation is available from the 'view' links below.
+
 ## Contains
 |        Name          |                     Description                                  |        URL              |
 |----------------------|------------------------------------------------------------------|-------------------------|
