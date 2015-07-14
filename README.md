@@ -3,7 +3,7 @@ Repository metadata store for Salt Stack plugins.
 
 Add `https://github.com/mclarkson/obdi-salt-repository.git` to Repository URLs in the Obdi Admin interface.
 
-An [Ubuntu Installation Guide](https://github.com/mclarkson/obdi-salt-repository/docs/ubuntu_guide.md) for installing Obdi and Salt Stack Tools is available in the docs directory.
+An [Ubuntu Installation Guide](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/ubuntu_guide.md) for installing Obdi and Salt Stack Tools is available in the docs directory.
 
 Further documentation is available from the 'view' links below.
 
