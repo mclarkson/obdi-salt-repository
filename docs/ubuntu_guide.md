@@ -72,7 +72,7 @@ The installation script, `ubuntu_install_script.sh` is available at:
 
 [https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/)
 
-To download and install on new Ubuntu Trusty server, type:
+To download and install on a new Ubuntu Trusty server, type:
 
     wget https://raw.githubusercontent.com/mclarkson/obdi-salt-repository/master/docs/ubuntu_install_script.sh
     bash ubuntu_install_script.sh
