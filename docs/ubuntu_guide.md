@@ -585,7 +585,8 @@ Click on &lsquo;Salt Tools&rsquo; to expand the menu item.
 
 ### Accept the Minion's Key
 
-Click the 'tick' icon to accept the key and wait for it to move to the Accepted Keys section.
+Click the 'tick' icon to accept the key and wait for it to move to the Accepted
+Keys section.
 
 Click the Environment Setting icon and enter the following details:
 
@@ -622,7 +623,9 @@ Click Add Regular Expression and enter the following details:
 * Description: **All servers**
 * Regex: **.***
 
-Note that the Regex field accepts Perl regular expressions only.
+Note that the Regex field accepts Perl regular expressions only. If server host
+names reflect their purpose then this feature can reduce the amount of
+configuration that needs to be done when setting up a new server.
 
 Click Apply. Wait. Go Back
 
@@ -636,11 +639,14 @@ Click Apply. Wait. Go Back.
 
 Click Map Configure Server in the left hand side menu.
 
-Choose the Environment then List Servers. Wait. The server will be shown.Configure Classes
+Choose the Environment then List Servers. Wait. The server will be
+shown.Configure Classes
 
-Click the check box in the left most column of the table and the row will be hilighted.
+Click the check box in the left most column of the table and the row will be
+hilighted.
 
-Click the plus sign in the Version column and choose the '0.1.0' version. Click Apply, wait, then Go Back.
+Click the plus sign in the Version column and choose the '0.1.0' version. Click
+Apply, wait, then Go Back.
 
 Click the Server Configuration icon. Wait - it's compiling.
 The server already has 'tree' in the list since it was added
@@ -666,7 +672,7 @@ Choose the Environment then Show Salt Jobs.
 Lots of jobs will be shown. Filter the jobs by typing 'high'
 into the Search box above the left hand side menu.
 
-Click View Result to see the output from state.highstate.
+Click the View Result icon to see the output from state.highstate.
 
 ## All done
 
