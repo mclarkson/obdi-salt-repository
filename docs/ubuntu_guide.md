@@ -66,7 +66,7 @@ The script can be used instead of typing, or copy/pasting, all the commands in t
 
 The installation script, `ubuntu_install_script.sh` is available at:
 
-[https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/ubuntu_guide.md)
+[https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/)
 
 Copy the script to a new Ubuntu Trusty server then type:
 
