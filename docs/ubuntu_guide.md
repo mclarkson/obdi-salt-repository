@@ -1,6 +1,55 @@
 # Obdi Salt Stack Setup Guide for Ubuntu Trusty
 
-[TOC]
+<div class="toc">
+<ul>
+<li><a href="#obdi-salt-stack-setup-guide-for-ubuntu-trusty">Obdi Salt Stack Setup Guide for Ubuntu Trusty</a></li>
+<li><a href="#installing-obdi">Installing Obdi</a><ul>
+<li><a href="#installation-script">Installation Script</a></li>
+<li><a href="#running-commands">Running Commands</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#install-ubuntu">Install Ubuntu</a></li>
+<li><a href="#install-obdi">Install Obdi</a></li>
+<li><a href="#test-obdi">Test Obdi</a></li>
+</ul>
+</li>
+<li><a href="#configuration">Configuration</a><ul>
+<li><a href="#configure-go_root">Configure go_root</a></li>
+<li><a href="#add-a-run-interface-user">Add a Run Interface User</a></li>
+<li><a href="#add-a-worker-user">Add a Worker User</a></li>
+<li><a href="#install-the-obdi-salt-plugins">Install the Obdi Salt Plugins</a></li>
+<li><a href="#add-a-data-centre-and-environment">Add a Data Centre and Environment</a></li>
+<li><a href="#change-user-permissions">Change User Permissions</a></li>
+<li><a href="#view-the-admin-interface">View the Admin interface</a></li>
+</ul>
+</li>
+<li><a href="#local-git-setup">Local GIT Setup</a><ul>
+<li><a href="#creating-the-repository">Creating the Repository</a></li>
+</ul>
+</li>
+<li><a href="#installing-salt-stack">Installing Salt Stack</a></li>
+<li><a href="#final-tasks">Final Tasks</a><ul>
+<li><a href="#install-the-external-node-classifier">Install the External Node Classifier</a></li>
+<li><a href="#configure-the-salt-job-viewer">Configure the Salt Job Viewer</a></li>
+<li><a href="#change-default-passwords">Change Default Passwords</a></li>
+</ul>
+</li>
+<li><a href="#all-done">All done</a></li>
+</ul>
+</li>
+<li><a href="#using-obdi">Using Obdi</a><ul>
+<li><a href="#quick-guide">Quick Guide</a><ul>
+<li><a href="#accept-the-minions-key">Accept the Minion's Key</a></li>
+<li><a href="#version-the-git-repo">Version the GIT Repo</a></li>
+</ul>
+</li>
+<li><a href="#map-classes-to-hosts">Map Classes to Hosts</a></li>
+<li><a href="#configure-the-server">Configure the Server</a></li>
+<li><a href="#view-the-job-status">View the Job Status.</a></li>
+<li><a href="#all-done_1">All done</a></li>
+</ul>
+</li>
+</ul>
+</div>
 
 # Installing Obdi
 
@@ -17,7 +66,7 @@ The script can be used instead of typing, or copy/pasting, all the commands in t
 
 The installation script, `ubuntu_install_script.sh` is available at:
 
-[https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/docs)
+[https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/ubuntu_guide.md)
 
 Copy the script to a new Ubuntu Trusty server then type:
 
