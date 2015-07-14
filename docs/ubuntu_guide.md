@@ -40,12 +40,12 @@
 <li><a href="#quick-guide">Quick Guide</a><ul>
 <li><a href="#accept-the-minions-key">Accept the Minion's Key</a></li>
 <li><a href="#version-the-git-repo">Version the GIT Repo</a></li>
-</ul>
-</li>
 <li><a href="#map-classes-to-hosts">Map Classes to Hosts</a></li>
 <li><a href="#configure-the-server">Configure the Server</a></li>
 <li><a href="#view-the-job-status">View the Job Status.</a></li>
 <li><a href="#all-done_1">All done</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -606,7 +606,7 @@ Use the arrows to choose '0.1.0' for the initial version, or any other version y
 
 Click Apply. Wait. A version list will appear.
 
-## Map Classes to Hosts
+### Map Classes to Hosts
 
 An entry that installs 'tree' on all servers will be created.
 
@@ -635,7 +635,7 @@ Click Choose option and select 'tree' then click the Add Class icon.
 
 Click Apply. Wait. Go Back.
 
-## Configure the Server
+### Configure the Server
 
 Click Map Configure Server in the left hand side menu.
 
@@ -662,7 +662,7 @@ Click Review.
 
 Click Apply.
 
-## View the Job Status.
+### View the Job Status
 
 Wait a couple minutes for 'tree' to be installed, the click
 Job Viewer in the left hand side menu.
@@ -674,7 +674,7 @@ into the Search box above the left hand side menu.
 
 Click the View Result icon to see the output from state.highstate.
 
-## All done
+### All done
 
 That's it for the quick tour of the Salt Tools user
 interface.
