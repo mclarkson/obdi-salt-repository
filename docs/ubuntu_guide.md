@@ -53,16 +53,20 @@
 
 # Installing Obdi
 
-The processes required to get the Obdi Salt plugins working are explained in this guide. The emphasis is to get up and running as simply and as quickly as possible. 
+The processes required to get the Obdi Salt plugins working are explained in
+this guide. The emphasis is to get up and running as simply and as quickly as
+possible. 
 
-Once this guide has been completed it will be possible to further refine the installation for your environment.
+Once this guide has been completed it will be possible to further refine the
+installation for your environment.
 
 ## Installation Script
 
-All the commands in this document have been collected together
-into an installation script.
+All the commands in this document have been collected together into an
+installation script.
 
-The script can be used instead of typing, or copy/pasting, all the commands in this document.
+The script can be used instead of typing, or copy/pasting, all the commands in
+this document.
 
 The installation script, `ubuntu_install_script.sh` is available at:
 
@@ -82,7 +86,8 @@ Copy commands from this document directly into a terminal.
 
 ### Install Ubuntu
 
-Install Ubuntu Trusty on a server, with a minimal set of packages, and ensure all packages are up to date.
+Install Ubuntu Trusty on a server, with a minimal set of packages, and ensure
+all packages are up to date.
 
 ### Install Obdi
 
@@ -95,11 +100,13 @@ apt-get update
 apt-get -y install obdi obdi-worker golang-go gcc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Obdi plugins are compiled on-demand, hence the requirement for 'golang-go' and 'gcc' in the last line of the previous code block.
+Obdi plugins are compiled on-demand, hence the requirement for 'golang-go' and
+'gcc' in the last line of the previous code block.
 
 ### Test Obdi
 
-Now that Obdi is installed it would be a good idea to give it a quick test before continuing further.
+Now that Obdi is installed it would be a good idea to give it a quick test
+before continuing further.
 
 **Test the Admin Interface**
 
@@ -109,7 +116,8 @@ Using a Web Browser, connect to the Admin interface at:
 
 Replace &lsquo;SERVER&rsquo; with the host name or IP Address of the server.
 
-A log-in screen should be shown. Log in with user name &lsquo;admin&rsquo; and the default password &lsquo;admin&rsquo;.
+A log-in screen should be shown. Log in with user name &lsquo;admin&rsquo; and
+the default password &lsquo;admin&rsquo;.
 
 <a name="test-the-run-interface"></a> **Test the Run Interface**
 
@@ -117,7 +125,8 @@ Log out and test the Run interface by connecting to:
 
 > https://SERVER/manager/run
 
-It's not possible to log in yet, unless a non admin user has been added, but this verifies that the run interface is accessible.
+It's not possible to log in yet, unless a non admin user has been added, but
+this verifies that the run interface is accessible.
 
 **Test the REST interface**
 
@@ -125,7 +134,9 @@ The unix program, *curl*, is required, so install it:
 
     apt-get -y install curl
 
-Using an *ssh* client, log into SERVER and issue two REST commands using *curl*; the first will log into Obdi and return a session ID, and the second will list all users.
+Using an *ssh* client, log into SERVER and issue two REST commands using
+*curl*; the first will log into Obdi and return a session ID, and the second
+will list all users.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Log in
@@ -140,14 +151,17 @@ curl -ks https://127.0.0.1:443/api/admin/$guid/users
 
 ## Configuration
 
-Obdi can be configured from the Admin interface using a Web Browser, or by using REST commands. The REST interface will be used in this guide to keep it short.
+Obdi can be configured from the Admin interface using a Web Browser, or by
+using REST commands. The REST interface will be used in this guide to keep it
+short.
 
-For simplicity, default user names and passwords will be used, where applicable, and these should be changed after installation.
+For simplicity, default user names and passwords will be used, where
+applicable, and these should be changed after installation.
 
 ### Configure go_root
 
-Obdi needs to know where to find the Google Go files. The following
-code will modify `/etc/obdi/obdi.conf` with the correct 'go_root':
+Obdi needs to know where to find the Google Go files. The following code will
+modify `/etc/obdi/obdi.conf` with the correct 'go_root':
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 eval `go env | grep GOROOT`
@@ -157,9 +171,11 @@ restart obdi
 
 ### Add a Run Interface User
 
-The 'admin' user is not allowed to log into the Run interface, and is blocked from doing so.
+The 'admin' user is not allowed to log into the Run interface, and is blocked
+from doing so.
 
-Create a user for logging into the Run interface. Permissions will be applied later, after data centres and environments have been added.
+Create a user for logging into the Run interface. Permissions will be applied
+later, after data centres and environments have been added.
 
 Add the user, 'nomen.nescio' (or any other name):
 
@@ -175,11 +191,15 @@ curl -ks -d '{
     "enabled":true}' "https://127.0.0.1:443/api/admin/$guid/users"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Test this user by logging into the Run interface as detailed in &lsquo;[Test the Run Interface](#test-the-run-interface)&rsquo; above. A generic user interface should be displayed with almost no content.
+Test this user by logging into the Run interface as detailed in &lsquo;[Test
+the Run Interface](#test-the-run-interface)&rsquo; above. A generic user
+interface should be displayed with almost no content.
 
 ### Add a Worker User
 
-The Worker needs a user set up for it to log into the Manager. By default this is the user, 'worker', with password, 'pAsSwOrD' and is defined in `/etc/obdi-worker/obdi-worker.conf`.
+The Worker needs a user set up for it to log into the Manager. By default this
+is the user, 'worker', with password, 'pAsSwOrD' and is defined in
+`/etc/obdi-worker/obdi-worker.conf`.
 
 Add the 'worker' user:
 
@@ -197,11 +217,16 @@ curl -ks -d '{
 
 ### Install the Obdi Salt Plugins
 
-Refer to [Obdi Plugins Documentation](https://github.com/mclarkson/obdi/blob/master/doc/plugins.md) for more information about Plugins.
+Refer to [Obdi Plugins
+Documentation](https://github.com/mclarkson/obdi/blob/master/doc/plugins.md)
+for more information about Plugins.
 
 **Add the Repository URLs**
 
-The repositories, [obdi-salt-repository](https://github.com/mclarkson/obdi-salt-repository) and [obdi-core-repository](https://github.com/mclarkson/obdi-core-repository), will be added as follows:
+The repositories,
+[obdi-salt-repository](https://github.com/mclarkson/obdi-salt-repository) and
+[obdi-core-repository](https://github.com/mclarkson/obdi-core-repository), will
+be added as follows:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 guid=`curl -ks -d '{"Login":"admin","Password":"admin"}' https://127.0.0.1:443/api/login | grep -o "[a-z0-9][^\"]*"`
@@ -249,11 +274,14 @@ curl -ks -d '{
 }' "https://127.0.0.1:443/api/admin/$guid/repoplugins"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Log into the Run interface again, as detailed in &lsquo;[Test the Run Interface](#test-the-run-interface)&rsquo; above. The user interface should now show navigation links in the left hand side of the window.
+Log into the Run interface again, as detailed in &lsquo;[Test the Run
+Interface](#test-the-run-interface)&rsquo; above. The user interface should now
+show navigation links in the left hand side of the window.
 
 ### Add a Data Centre and Environment
 
-One data centre, 'testdc', and one environment, 'testenv', will be added using the following code:
+One data centre, 'testdc', and one environment, 'testenv', will be added using
+the following code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 guid=`curl -ks -d '{"Login":"admin","Password":"admin"}' https://127.0.0.1:443/api/login | grep -o "[a-z0-9][^\"]*"`
@@ -334,21 +362,26 @@ might be easier.
 
 ## Local GIT Setup
 
-Obdi relies on [GIT](https://git-scm.com/) branches to map environments
-and versions. Refer to the [obdi-saltconfigserver](https://github.com/mclarkson/obdi-saltconfigserver) plugin page for more information.
+Obdi relies on [GIT](https://git-scm.com/) branches to map environments and
+versions. Refer to the
+[obdi-saltconfigserver](https://github.com/mclarkson/obdi-saltconfigserver)
+plugin page for more information.
 
-A GIT repository should be created with a **branch** named 'testenv' to
-match the **environment** named 'testenv' that was set up earlier. The 
-'testenv' GIT branch holds the Salt Stack files for the 'testenv'
-environment.
+A GIT repository should be created with a **branch** named 'testenv' to match
+the **environment** named 'testenv' that was set up earlier. The 'testenv' GIT
+branch holds the Salt Stack files for the 'testenv' environment.
 
-A bare GIT repository will be created at `/srv/repos/saltrepo.git`, then
-this repository will be cloned and populated with a single Salt Formula.
-This will be a local repository but it could be hosted remotely instead.
+A bare GIT repository will be created at `/srv/repos/saltrepo.git`, then this
+repository will be cloned and populated with a single Salt Formula.  Obdi will
+apply version numbers to this repository using branches.
 
-Obdi will clone the bare repository and apply version numbers to its copy
-using branches, rather than complicating the original repository. The
-[obdi-saltupdategit](https://github.com/mclarkson/obdi-saltupdategit)
+**NOTE**: If using a remote repository, this local repository will still need
+to be created, but the local repository should be created as a 'mirror' of the
+remote one. Obdi 'fetches' changes from the remote repository before applying
+versions thereby keeping the remote repository free of multiple version
+branches.
+
+The [obdi-saltupdategit](https://github.com/mclarkson/obdi-saltupdategit)
 plugin deals with versioning and was installed earlier.
 
 ### Creating the Repository
