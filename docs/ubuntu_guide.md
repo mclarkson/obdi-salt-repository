@@ -445,12 +445,12 @@ git push -u origin testenv
 ## Installing Salt Stack
 
 Install Salt Stack from the Ubuntu PPA (Instructions were taken from
-the [Salt Docs](http://docs.saltstack.com/en/latest/topics/installation/ubuntu.html)):
+the [Salt Docs](http://docs.saltstack.com/en/latest/topics/installation/ubuntu.html)). At the time of writing the following steps installed Salt Stack version 2015.5.2.
 
-The following code block installs the Salt Master and Minion.
+The following code block installs the Salt Master and Minion:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Add a convenience 'hosts' entry
+# Add a convenience 'hosts' entry so the Minion doesn't need configuring
 
 echo "127.0.1.2 salt" >>/etc/hosts
 
