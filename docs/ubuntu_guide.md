@@ -42,7 +42,7 @@
 <li><a href="#version-the-git-repo">Version the GIT Repo</a></li>
 <li><a href="#map-classes-to-hosts">Map Classes to Hosts</a></li>
 <li><a href="#configure-the-server">Configure the Server</a></li>
-<li><a href="#view-the-job-status">View the Job Status.</a></li>
+<li><a href="#view-the-job-status">View the Job Status</a></li>
 <li><a href="#all-done_1">All done</a></li>
 </ul>
 </li>
@@ -199,7 +199,7 @@ interface should be displayed with almost no content.
 ### Add a Worker User
 
 The Worker needs a user set up for it to log into the Manager. By default this
-is the user, 'worker', with password, 'pAsSwOrD' and is defined in
+is the user, 'worker', with password, 'pAsSwOrD', which is defined in
 `/etc/obdi-worker/obdi-worker.conf`.
 
 Add the 'worker' user:
