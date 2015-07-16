@@ -513,13 +513,6 @@ This daemon:
 * Requires a new user to accept job status submissions.
 * Needs a configuration file at `/etc/obdi/job_status.conf`.
 
-**NOTE**: The job viewer uses *salt-run* in some places, which tries to
-access the Salt Master as if it's a Minion, and therefore supplies a
-**key that needs to be accepted in the Manage Keys plugin**. Check the
-Manage Keys plugin once the job viewer has processed a few jobs, or
-install the Minion on this server and accept the key after the Minion
-starts.
-
 Set up the Job Viewer:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
