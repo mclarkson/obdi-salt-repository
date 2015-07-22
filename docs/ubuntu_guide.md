@@ -77,6 +77,12 @@ To download and install on a new Ubuntu Trusty server, type:
     wget https://raw.githubusercontent.com/mclarkson/obdi-salt-repository/master/docs/ubuntu_install_script.sh
     bash ubuntu_install_script.sh
 
+The script can be run many times without causing any problems. This may
+need to be done if, for instance, the internet connection was down when
+running the script the first time.
+
+Once the script has completed successfully proceed to the [Using Obdi](#using-obdi) section.
+
 ## Running Commands
 
 All commands should be run as the 'root' user.
