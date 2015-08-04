@@ -68,7 +68,7 @@ installation script.
 The script can be used instead of typing, or copy/pasting, all the commands in
 this document.
 
-The installation script, `ubuntu_install_script.sh` is available at:
+The installation script, `centos_install_script.sh` is available at:
 
 [https://github.com/mclarkson/obdi-salt-repository/docs](https://github.com/mclarkson/obdi-salt-repository/blob/master/docs/)
 
