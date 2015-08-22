@@ -223,7 +223,7 @@ git push -u origin testenv
 
 echo "127.0.1.2 salt" >>/etc/hosts
 
-yum -y install salt-master salt-minion
+yum -y install salt-master salt-minion GitPython
 
 # Back up the original salt master config file
 cp /etc/salt/master /etc/salt/master.orig
