@@ -98,20 +98,21 @@ all packages are up to date.
 
 ### Install Obdi
 
-Get Obdi from its [GitHub project page](https://github.com/mclarkson/obdi) and
-install it using Yum, as shown below. The EPEL repository should be added first
-so that Golang can be installed. Golang and gcc are required for compiling
-plugins on-demand.
+Obdi is available from Fedora COPR. EPEL repositories are also required
+to install golang, which is required for compile-on-demand.
 
 Install Obdi:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Enable EPEL YUM repository
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 
-yum -y install \
-  https://github.com/mclarkson/obdi/releases/download/0.1.4/obdi-0.1.4-2.x86_64.rpm \
-  https://github.com/mclarkson/obdi/releases/download/0.1.4/obdi-worker-0.1.4-2.x86_64.rpm \
-  git cronie
+# Enable Obdi COPR YUM repository
+curl -o /etc/yum.repos.d/obdi.repo \
+  https://copr.fedoraproject.org/coprs/mclarkson/Obdi/repo/epel-6/mclarkson-Obdi-epel-6.repo
+
+# Install Obdi
+yum -y install obdi obdi-worker git cronie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Test Obdi
@@ -460,7 +461,7 @@ git push -u origin testenv
 ## Installing Salt Stack
 
 Install Salt Stack from the Ubuntu PPA (Instructions were taken from
-the [Salt Docs](http://docs.saltstack.com/en/latest/topics/installation/ubuntu.html)). At the time of writing the following steps installed Salt Stack version 2015.5.2.
+the [Salt Docs](http://docs.saltstack.com/en/latest/topics/installation/rhel.html)). At the time of writing the following steps installed Salt Stack version 2015.5.2.
 
 The following code block installs the Salt Master and Minion:
 
@@ -471,7 +472,7 @@ echo "127.0.1.2 salt" >>/etc/hosts
 
 # Install Salt
 
-yum -y install salt-master salt-minion
+yum -y install salt-master salt-minion GitPython
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a Salt configuration file:
