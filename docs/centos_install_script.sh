@@ -34,14 +34,17 @@ read name
     exit 0
 }
 
-# Install Obdi
-
+# Enable EPEL YUM repository
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 
-yum -y install \
-   https://github.com/mclarkson/obdi/releases/download/0.1.4/obdi-0.1.4-2.x86_64.rpm \
-   https://github.com/mclarkson/obdi/releases/download/0.1.4/obdi-worker-0.1.4-2.x86_64.rpm \
-   git cronie
+# Enable Obdi COPR YUM repository
+
+curl -o /etc/yum.repos.d/obdi.repo \
+  https://copr.fedoraproject.org/coprs/mclarkson/Obdi/repo/epel-6/mclarkson-Obdi-epel-6.repo
+
+# Install Obdi
+
+yum -y install obdi obdi-worker git cronie
 
 # Test Obdi
 
