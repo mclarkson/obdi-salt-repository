@@ -104,7 +104,7 @@ Obdi can be installed directly from the Ubuntu PPA as follows:
 apt-get -y install software-properties-common
 add-apt-repository -y ppa:mark-clarkson/obdi
 apt-get update
-apt-get -y install obdi obdi-worker golang-go gcc
+apt-get -y install obdi obdi-worker golang-go build-essential
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Obdi plugins are compiled on-demand, hence the requirement for 'golang-go' and
