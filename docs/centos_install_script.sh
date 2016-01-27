@@ -40,7 +40,7 @@ rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 # Enable Obdi COPR YUM repository
 
 curl -o /etc/yum.repos.d/obdi.repo \
-  https://copr.fedoraproject.org/coprs/mclarkson/Obdi/repo/epel-6/mclarkson-Obdi-epel-6.repo
+  https://copr.fedorainfracloud.org/coprs/mclarkson/Obdi/repo/epel-6/mclarkson-Obdi-epel-6.repo
 
 # Install Obdi
 
